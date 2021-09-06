@@ -40,10 +40,10 @@ Plug 'ctrlpvim/ctrlp.vim'
 " easy autosave feature
 Plug '907th/vim-auto-save'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 "Plug 'majutsushi/tagbar'
-Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -61,7 +61,7 @@ Plug 'jceb/vim-orgmode'
 
 Plug 'dpelle/vim-LanguageTool'
 
-Plug 'liuchengxu/vim-which-key'
+Plug 'folke/which-key.nvim'
 
 
 " key binding
@@ -84,6 +84,14 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 " time monitoring
 " Plug 'wakatime/vim-wakatime'
 call plug#end()
+
+lua << EOF
+  require("which-key").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
 " }}}
 
 " AutoSave {{{
@@ -126,13 +134,13 @@ augroup END
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %
 " }}}
 
-" Some UI Settings {{{
+"  Some UI Settings {{{
 " show line numbers
 set number
 syntax on
-colorscheme onedark
+" colorscheme onedark
 
-let g:airline#extensions#tabline#enabled = 1 " Allows airline to show open buffers if there is only one tab
+" let g:airline#extensions#tabline#enabled = 1 " Allows airline to show open buffers if there is only one tab
 " let g:airline_theme='simple' " Need to explore themes more
 
 """ True colors
@@ -481,7 +489,8 @@ let g:ale_fix_on_save = 1
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
+let g:ale_python_pylint_options = '--max-line-length=120'
+let g:ale_python_flake8_options = '--max-line-length=120'
 " Linter status in statusline
 function! LinterStatus() abort
   let l:counts = ale#statusline#Count(bufnr(''))
