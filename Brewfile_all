@@ -1,0 +1,27 @@
+tap "homebrew/cask"
+
+cask_args appdir: "~/Applications", require_sha: true
+
+
+cask 1password-cli
+brew visual-studio-code
+cask docker
+brew whalebrew
+brew gh
+brew neovim
+brew zsh-completions
+brew zsh-syntax-highlighting
+brew zsh-autosuggestions
+brew tree
+brew tldr
+brew tmux
+brew miniconda
+brew bibclean
+brew yamllint
+brew redpen
+brew prettier
+brew the_silver_searcher
+brew dcm2niix
+brew pandoc
+brew node
+brew ffmpeg
