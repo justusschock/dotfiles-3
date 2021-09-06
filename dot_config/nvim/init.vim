@@ -4,7 +4,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-Plug "airblade/vim-gitgutter"
+Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 
 
@@ -42,7 +42,7 @@ Plug '907th/vim-auto-save'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 Plug 'edkolev/tmuxline.vim'
 
 Plug 'NLKNguyen/papercolor-theme'
@@ -53,7 +53,7 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'rhysd/vim-grammarous'
 Plug 'davidbeckingsale/writegood.vim'
 
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'ekalinin/Dockerfile.vim'
 
@@ -82,7 +82,7 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 
 " time monitoring
-Plug 'wakatime/vim-wakatime'
+" Plug 'wakatime/vim-wakatime'
 call plug#end()
 " }}}
 
@@ -185,7 +185,7 @@ set smartcase
 
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
-" }}}
+"  }}}
 
 " Code Folding {{{
 " enable code folding
@@ -198,7 +198,7 @@ set foldnestmax=10
 set foldmethod=marker
 
 nnoremap <space> za
-" }}}
+"  }}}
 
 " KeyMaps {{{
 " move vertically by visual line
@@ -387,14 +387,14 @@ let NERDTreeMinimalUI = 1
 
 
 """""""""" Tagbar settings """""""""""""""
-nmap <F8> :TagbarToggle<CR>
-let g:tagbar_ctags_bin='/usr/local/bin/ctags'
+"nmap <F8> :TagbarToggle<CR>
+"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 
 """""""""" gutentags settings """"""""""""
 " Keep the tag files out of the projects:
-let g:gutentags_cache_dir='/tmp/gutentags/'
+"let g:gutentags_cache_dir='/tmp/gutentags/'
 
-" }}}
+" } }}
 
 " CtrlP settings {{{
 " open ag.vim
@@ -414,9 +414,9 @@ else
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-" }}}
+"  }}}
 
-" Backups {{{
+" B ackups {{{
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*

@@ -113,6 +113,8 @@ export EDITOR='nvim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+{{ if (eq .chezmoi.os "darwin") }}
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -127,3 +129,25 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+{{ else }}
+
+# >>> conda init >>>
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/work/scratch/schock/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/work/scratch/schock/conda/etc/profile.d/conda.sh" ]; then
+        . "/work/scratch/schock/conda/etc/profile.d/conda.sh"
+    else
+        export PATH="/work/scratch/schock/conda/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+alias docker_userrun="docker run -u $(id -u ${USER}):$(id -g ${USER}) --rm --runtime=nvidia -it"
+
+{{ end }}
