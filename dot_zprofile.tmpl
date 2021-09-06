@@ -1,0 +1,12 @@
+
+{{ if (eq .chezmoi.os "darwin") }}
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval ""
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+{{ else }}
+eval "$(/work/scratch/schock/.linuxbrew/bin/brew shellenv)"
+eval ""
+eval "$(/work/scratch/schock/.linuxbrew/bin/brew shellenv)"
+{{ end }}
