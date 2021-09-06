@@ -7,7 +7,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+{{ if (eq .chezmoi.os "darwin") }}
 export ZSH="/Users/justusschock/.oh-my-zsh"
+
+{{ else }}
+export ZSH="/home/staff/schock/.oh-my-zsh"
+
+{{ end }}
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
