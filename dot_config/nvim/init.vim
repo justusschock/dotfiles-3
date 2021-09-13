@@ -1,4 +1,4 @@
-" Plugin Definitions {{{
+"  Plugin Definitions {{{
 call plug#begin('~/.local/share/nvim/plugged')
 " filetree
 Plug 'scrooloose/nerdtree'
@@ -207,7 +207,7 @@ set foldnestmax=10
 set foldmethod=marker
 
 nnoremap <space> za
-"  }}}
+" }}}
 
 " KeyMaps {{{
 " move vertically by visual line
@@ -395,16 +395,7 @@ nnoremap <C-n> :call NERDTreeFindToggle()<CR>
 "remove ? note
 let NERDTreeMinimalUI = 1
 
-
-"""""""""" Tagbar settings """""""""""""""
-"nmap <F8> :TagbarToggle<CR>
-"let g:tagbar_ctags_bin='/usr/local/bin/ctags'
-
-"""""""""" gutentags settings """"""""""""
-" Keep the tag files out of the projects:
-"let g:gutentags_cache_dir='/tmp/gutentags/'
-
-" } }}
+" }}}
 
 " CtrlP settings {{{
 " open ag.vim
@@ -426,7 +417,7 @@ else
 endif
 "  }}}
 
-" B ackups {{{
+" Backups {{{
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
@@ -487,7 +478,7 @@ let g:ale_fixers = {
       \    'yaml': ['prettier'],
       \}
 nmap <F6> :ALEFix<CR>
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
