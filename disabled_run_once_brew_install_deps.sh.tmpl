@@ -1,9 +1,0 @@
-#! /bin/bash
-
-brew bundle -f Brewfile_all
-
-{{ if eq .chezmoi.os "linux" -}}
-brew bundle -f Brewfile_linux
-{{ else if eq .chezmoi.os "darwin" -}}
-brew bundle -f Brewfile_mac
-{{ end -}}
