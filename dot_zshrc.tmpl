@@ -81,13 +81,13 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(ansible brew docker dotenv git gitignore iterm2 keychain osx python sudo vscode ssh-agent)
+plugins=(ansible brew docker dotenv git gitignore iterm2 keychain macos python sudo vscode ssh-agent)
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 zstyle :omz:plugins:keychain agents gpg,ssh
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities lfb_srv1 id_github lfb_intern
-zstyle :omz:plugins:ssh-agent ssh-add-args -K -A
+zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain --apple-load-keychain
 VSCODE=code
 
 source $ZSH/oh-my-zsh.sh
