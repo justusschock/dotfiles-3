@@ -26,11 +26,11 @@ cmd [[let g:vista#renderer#enable_icon = 1]]
 
 -- Change some default icons
 --- see: https://github.com/slavfox/Cozette/blob/master/img/charmap.txt
-cmd [[
-  let g:vista#renderer#icons = {
-  \   "function": "\u0192",
-  \   "variable": "\uf00d",
-  \   "prototype": "\uf013",
-  \   "macro": "\uf00b",
-  \ }
-]]
+-- cmd [[
+--   let g:vista#renderer#icons = {
+--   \   "function": "\u0192",
+--   \   "variable": "\uf00d",
+--   \   "prototype": "\uf013",
+--   \   "macro": "\uf00b",
+--   \ }
+-- ]]
