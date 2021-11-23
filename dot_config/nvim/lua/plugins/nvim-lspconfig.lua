@@ -86,7 +86,19 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
--- TODO: remove non-necessary servers (TS, HTML), add ansiblels, dockerls, jsonls, yamlls, julials
+-- Install: brew install llvm texlab npm yarn && npm i -g bash-language-server dockerfile-language-server-nodejs vscode-langservers-extracted && yarn global add ansible-language-server yaml-language-server
+-- local handle = io.popen('brew install llvm texlab npm yarn')
+-- local result = handle:read("*a")
+-- handle:close()
+-- print(result)
+-- handle = io.popen('npm i -g bash-language-server dockerfile-language-server-nodejs vscode-langservers-extracted')
+-- result = handle:read("*a")
+-- handle:close()
+-- print(result)
+-- handle = io.popen('yarn global add ansible-language-server yaml-language-server')
+-- result = handle:read("*a")
+-- handle:close()
+-- print(result)
 local servers = { 'bashls', 'pyright', 'clangd', 'ansiblels', 'dockerls', 'jsonls', 'yamlls', 'texlab' }
 
 -- Set settings for language servers below
