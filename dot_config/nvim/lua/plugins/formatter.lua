@@ -78,12 +78,14 @@ require('formatter').setup({
                 return {
                     exe = "isort",
                     args = {"--profile", "black", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
+                    stdin = true
                 }
             end, 
             function()
                 return {
                     exe = "autoimport",
                     args = {vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
+                    stdin = true
                 }
             end
         
