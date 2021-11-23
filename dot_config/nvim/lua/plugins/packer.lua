@@ -153,6 +153,7 @@ use ({'navarasu/onedark.nvim',
 
   -- delete buffers
   use {'ojroques/nvim-bufdel'}
+  use "Pocco81/AutoSave.nvim"
 
   use 'dense-analysis/ale'
 
