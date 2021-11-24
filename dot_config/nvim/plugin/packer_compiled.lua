@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/justusschock/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/justusschock/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/justusschock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/justusschock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/justusschock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/staff/schock/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/staff/schock/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/staff/schock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/staff/schock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/staff/schock/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,136 +71,136 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
     config = { "\27LJ\2\n_\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\topts\27alpha.themes.dashboard\nsetup\nalpha\frequire\0" },
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
   ["black-nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/black-nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/black-nvim",
     url = "https://github.com/averms/black-nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-path"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/cmp-path",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["feline.nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/feline.nvim",
     url = "https://github.com/famiu/feline.nvim"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["isort.nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/isort.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/isort.nvim",
     url = "https://github.com/stsewd/isort.nvim"
   },
   ["nvim-bufdel"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-bufdel",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-bufdel",
     url = "https://github.com/ojroques/nvim-bufdel"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-dap"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-dap",
     url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-dap-python"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
     url = "https://github.com/mfussenegger/nvim-dap-python"
   },
   ["nvim-dap-virtual-text"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
     url = "https://github.com/theHamsta/nvim-dap-virtual-text"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-treesitter-refactor"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["onedark.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fonedark\frequire\0" },
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/onedark.nvim",
     url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["vim-auto-save"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/vim-auto-save",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/vim-auto-save",
     url = "https://github.com/907th/vim-auto-save"
   },
   ["vista.vim"] = {
     loaded = true,
-    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/vista.vim",
+    path = "/home/staff/schock/.local/share/nvim/site/pack/packer/start/vista.vim",
     url = "https://github.com/liuchengxu/vista.vim"
   }
 }
@@ -214,14 +214,14 @@ time([[Config for alpha-nvim]], false)
 time([[Config for onedark.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fonedark\frequire\0", "config", "onedark.nvim")
 time([[Config for onedark.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
