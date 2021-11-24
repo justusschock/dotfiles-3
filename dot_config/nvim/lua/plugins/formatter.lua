@@ -109,6 +109,6 @@ vim.api.nvim_exec([[
 vim.api.nvim_exec([[
   augroup ISortFormat
     autocmd!
-    autocmd BufWritePre *.py Isort
+    autocmd BufWritePre *.py 'Isort --profile black'
   augroup end
 ]], false)
