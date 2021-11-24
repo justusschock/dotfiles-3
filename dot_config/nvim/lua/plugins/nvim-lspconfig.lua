@@ -118,10 +118,6 @@ for _, lsp in ipairs(servers) do
       debounce_text_changes = 150,
     }
   }
-
-  require'lspconfig'.vimls.setup{
-    on_attach = aerial.on_attach,
-  }
 end
 
 vim.api.nvim_exec([[
@@ -130,5 +126,3 @@ vim.api.nvim_exec([[
     autocmd BufEnter * SymbolsOutlineOpen
   augroup end
 ]], false)
-
-BufEnter
