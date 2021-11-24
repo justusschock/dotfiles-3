@@ -162,6 +162,19 @@ use ({'navarasu/onedark.nvim',
 
 --   use 'dense-analysis/ale'
 
+use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
+
+use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+use 'simrat39/symbols-outline.nvim'
+
   -- use {'numirias/semshi'}
   if packer_bootstrap then
     require('packer').sync()
