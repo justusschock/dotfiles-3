@@ -99,6 +99,16 @@
 --   autocmd BufWritePost *.js,*.rs,*.lua,*.sh,*.py,*.yaml,*.json,*.md FormatWrite
 -- augroup END
 -- ]], true)
-vim.api.nvim.exec [[
-    autocmd BufWritePre *.py execute ':Black | :Isort'
-]]
+vim.api.nvim_exec([[
+  augroup BlackFormat
+    autocmd!
+    autocmd BufWritePre *.py call Black()
+  augroup end
+]], false)
+
+vim.api.nvim_exec([[
+  augroup ISortFormat
+    autocmd!
+    autocmd BufWritePre *.py Isort
+  augroup end
+]], false)
