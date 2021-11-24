@@ -76,7 +76,6 @@ return packer.startup(function()
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
   use 'theHamsta/nvim-dap-virtual-text'
-  use 'mhartington/formatter.nvim'
   
   -- colorschemes
 --   use 'tanvirtin/monokai.nvim'
@@ -156,7 +155,12 @@ use ({'navarasu/onedark.nvim',
 --   use "Pocco81/AutoSave.nvim"
   use "907th/vim-auto-save"
 
-  use 'dense-analysis/ale'
+--   use 'mhartington/formatter.nvim' -- use separate plugins instead
+  -- TODO: Use separate isort package. Autoimport ist already part of pyright
+  use 'averms/black-nvim'
+  use 'stsewd/isort.nvim'
+
+--   use 'dense-analysis/ale'
 
   -- use {'numirias/semshi'}
   if packer_bootstrap then
