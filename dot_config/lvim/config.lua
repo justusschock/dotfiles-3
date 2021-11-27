@@ -1,11 +1,11 @@
---[[
-lvim is the global options object
+-- [[
+-- lvim is the global options object
 
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
+-- Linters should be
+-- filled in as strings with either
+-- a global executable or a path to
+-- an executable
+-- ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
@@ -21,6 +21,11 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+lvim.keys.normal_mode["<leader>ff"] = ":Telescope find_files<cr>"
+lvim.keys.normal_mode["<leader>fg"] = ":Telescope live_grep<cr>"
+lvim.keys.normal_mode["<leader>fb"] = ":Telescope buffers<cr>"
+lvim.keys.normal_mode["<leader>fh"] = ":Telescope help_tags<cr>"
+lvim.keys.normal_mode["<silent> ca"] = ":lua vim.lsp.buf.code_action()<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -116,7 +121,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   end
 -- end
 
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
+
+-- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { exe = "black", filetypes = { "python" } },
@@ -129,7 +135,6 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   { exe = "flake8", filetypes = { "python" } },
-  -- { exe = "mypy", filetypes = { "python" } },
   {
     exe = "shellcheck",
 
@@ -140,9 +145,8 @@ linters.setup {
   {
     exe = "codespell",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "python" },
   },
-  { exe = "mypy" },
+ { exe = "mypy" },
 }
 
 -- Additional Plugins
@@ -212,6 +216,12 @@ lvim.plugins = {
     vim.g.mkdp_auto_start = 1
   end,
 },
+{"kosayoda/nvim-lightbulb",
+config = function()
+        vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+end,
+},
+-- {rocks="luaformatter"}
 }
 
 
@@ -230,7 +240,7 @@ lvim.autocommands.custom_groups = {
 
 -- Enable Cursormovement
 lvim.line_wrap_cursor_movement = true
--- vim.opt.showmode = true -- show mode (like -- INSERT --)
+vim.opt.showmode = true -- show mode (like -- INSERT --)
 
 
 
