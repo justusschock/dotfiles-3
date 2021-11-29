@@ -1,31 +1,29 @@
--- [[
--- lvim is the global options object
+--[[
+lvim is the global options object
 
--- Linters should be
--- filled in as strings with either
--- a global executable or a path to
--- an executable
--- ]]
+Linters should be
+filled in as strings with either
+a global executable or a path to
+an executable
+]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
+vim.opt.foldmethod = "expr"
+vim.opt.showmode = true
+vim.g.autosave = true
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = "<space>"
+lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-lvim.keys.normal_mode["<leader>ff"] = ":Telescope find_files<cr>"
-lvim.keys.normal_mode["<leader>fg"] = ":Telescope live_grep<cr>"
-lvim.keys.normal_mode["<leader>fb"] = ":Telescope buffers<cr>"
-lvim.keys.normal_mode["<leader>fh"] = ":Telescope help_tags<cr>"
-lvim.keys.normal_mode["<silent> ca"] = ":lua vim.lsp.buf.code_action()<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -63,11 +61,20 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 1
+lvim.builtin.terminal.active = true
+lvim.builtin.dap.active = true
+lvim.builtin.terminal.active = true
+lvim.builtin.bufferline.active = true
+lvim.builtin.lualine.active = true
+lvim.builtin.project.active = true
+lvim.builtin.comment.active = true
+lvim.builtin.nvimtree.active = true
+lvim.builtin.gitsigns.active = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = "maintained"
-  -- {
--- "bash",
+-- {
+--   "bash",
 --   "c",
 --   "javascript",
 --   "json",
@@ -121,33 +128,45 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   end
 -- end
 
-
--- set a formatter, this will override the language server formatting capabilities (if it exists)
+-- -- set a formatter, this will override the language server formatting capabilities (if it exists)
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { exe = "black", filetypes = { "python" } },
-  { exe = "isort", filetypes = { "python" }, args = { "--profile", "black" }},
+  { exe = "black" },
+  { exe = "isort", args = {"--profile", "black"}},
   { exe = "prettier" },
-  { exe = "shfmt" },
+  { exe = "shfmt" }
 }
+--   {m
+--     exe = "prettier",
+--     ---@usage arguments to pass to the formatter
+--     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--     args = { "--print-with", "100" },
+--     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--     filetypes = { "typescript", "typescriptreact" },
+--   },
+-- }
 
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { exe = "flake8", filetypes = { "python" } },
-  {
-    exe = "shellcheck",
-
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    args = { "--severity", "warning" },
-  },
-  {
-    exe = "codespell",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-  },
- { exe = "mypy" },
+  { exe = "flake8" },
+  { exe = "shellcheck", args = { "--severity", "warning"} },
+  { exe = "codespell" },
+  { exe = "mypy" },
 }
+
+--   {
+--     exe = "shellcheck",
+--     ---@usage arguments to pass to the formatter
+--     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+--     args = { "--severity", "warning" },
+--   },
+--   {
+--     exe = "codespell",
+--     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+--     filetypes = { "javascript", "python" },
+--   },
+-- }
 
 -- Additional Plugins
 lvim.plugins = {
@@ -156,17 +175,17 @@ lvim.plugins = {
       "folke/trouble.nvim",
       cmd = "TroubleToggle",
     },
+   {
+      "ray-x/lsp_signature.nvim",
+      config = function() require"lsp_signature".on_attach() end,
+      event = "BufRead"
+    },
+    { "tpope/vim-sleuth" },
+    { "lervag/vimtex" },
+    { "cespare/vim-toml" },
     {
-        "ray-x/lsp_signature.nvim",
-        config = function() require"lsp_signature".on_attach() end,
-        event = "BufRead"
-},
-  { "tpope/vim-sleuth" },
-  { "lervag/vimtex" },
-  { "cespare/vim-toml" },
-{
-    "aserowy/tmux.nvim",
-    config = function()
+      "aserowy/tmux.nvim",
+      config = function()
         require("tmux").setup({
             -- overwrite default configuration
             -- here, e.g. to enable default bindings
@@ -184,52 +203,44 @@ lvim.plugins = {
                 enable_default_keybindings = true,
             }
         })
-    end
-},
-{
-  "sindrets/diffview.nvim",
-  event = "BufRead",
-},
-{
-  "f-person/git-blame.nvim",
-  event = "BufRead",
-  config = function()
-    vim.cmd "highlight default link gitblame SpecialComment"
-    vim.g.gitblame_enabled = 0
-  end,
-},
-{
-  "pwntester/octo.nvim",
-  event = "BufRead",
-},
-{
-  "Pocco81/AutoSave.nvim",
-  config = function()
-    require("autosave").setup()
-  end,
-},
-{
-  "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
-  ft = "markdown",
-  config = function()
-    vim.g.mkdp_auto_start = 1
-  end,
-},
-{"kosayoda/nvim-lightbulb",
-config = function()
+      end
+    },
+    {
+      "sindrets/diffview.nvim",
+      event = "BufRead",
+    },
+    {
+      "f-person/git-blame.nvim",
+      event = "BufRead",
+      config = function()
+        vim.cmd "highlight default link gitblame SpecialComment"
+        vim.g.gitblame_enabled = 0
+      end,
+    },
+    {
+       "pwntester/octo.nvim",
+       event = "BufRead",
+    },
+    {
+      "Pocco81/AutoSave.nvim",
+      config = function()
+        require("autosave").setup()
+      end,
+    },
+    {
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      ft = "markdown",
+      config = function()
+        vim.g.mkdp_auto_start = 1
+      end,
+    },
+    {"kosayoda/nvim-lightbulb",
+      config = function()
         vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
-end,
-},
--- {rocks="luaformatter"}
+      end,
+    },
 }
-
-
-
-
--- Add mypy Support
--- TODO: remove with next Lunarvim release
--- lvim.plugins.commit.null_ls = "b07ce47f02c7b12ad65bfb4da215c6380228a959"
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 lvim.autocommands.custom_groups = {
@@ -237,10 +248,3 @@ lvim.autocommands.custom_groups = {
   { "BufWinEnter", "*.py", "setlocal ts=4 sw=4" },
   { "InsertEnter", "*", ":normal zz" },
 }
-
--- Enable Cursormovement
-lvim.line_wrap_cursor_movement = true
-vim.opt.showmode = true -- show mode (like -- INSERT --)
-
-
-
