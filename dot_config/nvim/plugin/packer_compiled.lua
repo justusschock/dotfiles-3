@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/ThePrimeagen/harpoon"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["indent-blankline.nvim"] = {
     config = { "require'plugins.indent-blankline'" },
     loaded = true,
@@ -432,6 +437,11 @@ _G.packer_plugins = {
     path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/tagalong.vim",
     url = "https://github.com/AndrewRadev/tagalong.vim"
   },
+  ["telescope-bibtex.nvim"] = {
+    loaded = true,
+    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/telescope-bibtex.nvim",
+    url = "https://github.com/nvim-telescope/telescope-bibtex.nvim"
+  },
   ["telescope-conda.nvim"] = {
     loaded = true,
     path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/telescope-conda.nvim",
@@ -446,6 +456,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
+  },
+  ["telescope-github.nvim"] = {
+    loaded = true,
+    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/telescope-github.nvim",
+    url = "https://github.com/nvim-telescope/telescope-github.nvim"
+  },
+  ["telescope-packer.nvim"] = {
+    loaded = true,
+    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/telescope-packer.nvim",
+    url = "https://github.com/nvim-telescope/telescope-packer.nvim"
   },
   ["telescope-project.nvim"] = {
     loaded = true,
@@ -485,6 +505,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/vim-abolish",
     url = "https://github.com/tpope/vim-abolish"
+  },
+  ["vim-browser-search"] = {
+    loaded = true,
+    path = "/Users/justusschock/.local/share/nvim/site/pack/packer/start/vim-browser-search",
+    url = "https://github.com/voldikss/vim-browser-search"
   },
   ["vim-capslock"] = {
     loaded = true,
@@ -623,98 +648,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: numb.nvim
-time([[Config for numb.nvim]], true)
-require'plugins.numb'
-time([[Config for numb.nvim]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require'plugins.nvim-notify'
-time([[Config for nvim-notify]], false)
--- Config for: null-ls.nvim
-time([[Config for null-ls.nvim]], true)
-require'plugins.null-ls'
-time([[Config for null-ls.nvim]], false)
--- Config for: vim-rooter
-time([[Config for vim-rooter]], true)
-require'plugins.vim-rooter'
-time([[Config for vim-rooter]], false)
--- Config for: vim-ultest
-time([[Config for vim-ultest]], true)
-require'plugins.ultest'
-time([[Config for vim-ultest]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-require'plugins.alpha-nvim'
-time([[Config for alpha-nvim]], false)
--- Config for: lightspeed.nvim
-time([[Config for lightspeed.nvim]], true)
-require'plugins.lightspeed'
-time([[Config for lightspeed.nvim]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-require'plugins.colorizer'
-time([[Config for nvim-colorizer.lua]], false)
--- Config for: neoscroll.nvim
-time([[Config for neoscroll.nvim]], true)
-require'plugins.neoscroll'
-time([[Config for neoscroll.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require'plugins.toggleterm'
-time([[Config for toggleterm.nvim]], false)
--- Config for: copilot.vim
-time([[Config for copilot.vim]], true)
-require'plugins.copilot'
-time([[Config for copilot.vim]], false)
--- Config for: zen-mode.nvim
-time([[Config for zen-mode.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
-time([[Config for zen-mode.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require'plugins.gitsigns'
-time([[Config for gitsigns.nvim]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require'plugins.feline'
-time([[Config for feline.nvim]], false)
--- Config for: minimap.vim
-time([[Config for minimap.vim]], true)
-require'plugins.minimap'
-time([[Config for minimap.vim]], false)
--- Config for: twilight.nvim
-time([[Config for twilight.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
-time([[Config for twilight.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-require'plugins.todo-comments'
-time([[Config for todo-comments.nvim]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-require'plugins.harpoon'
-time([[Config for harpoon]], false)
--- Config for: stabilize.nvim
-time([[Config for stabilize.nvim]], true)
-require'plugins.stabilize'
-time([[Config for stabilize.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require'plugins.telescope'
-time([[Config for telescope.nvim]], false)
--- Config for: editorconfig-vim
-time([[Config for editorconfig-vim]], true)
-require'plugins.editorconfig'
-time([[Config for editorconfig-vim]], false)
--- Config for: focus.nvim
-time([[Config for focus.nvim]], true)
-require'plugins.focus'
-time([[Config for focus.nvim]], false)
--- Config for: nvim-ts-rainbow
-time([[Config for nvim-ts-rainbow]], true)
-require'plugins.nvim-ts-rainbow'
-time([[Config for nvim-ts-rainbow]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require'plugins.nvimtree'
@@ -723,46 +656,138 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for vim-gutentags]], true)
 require'plugins.vim-gutentags'
 time([[Config for vim-gutentags]], false)
--- Config for: nvim-gps
-time([[Config for nvim-gps]], true)
-require'plugins.nvim-gps'
-time([[Config for nvim-gps]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require'plugins.telescope'
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require'plugins.treesitter'
 time([[Config for nvim-treesitter]], false)
--- Config for: octo.nvim
-time([[Config for octo.nvim]], true)
-require'plugins.octo'
-time([[Config for octo.nvim]], false)
--- Config for: nvim-dap-ui
-time([[Config for nvim-dap-ui]], true)
-require'plugins.nvim-dap-ui'
-time([[Config for nvim-dap-ui]], false)
--- Config for: nvim-neoclip.lua
-time([[Config for nvim-neoclip.lua]], true)
-require'plugins.nvim-neoclip'
-time([[Config for nvim-neoclip.lua]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-require'plugins.nvim-dap-virtual-text'
-time([[Config for nvim-dap-virtual-text]], false)
--- Config for: nvim-lightbulb
-time([[Config for nvim-lightbulb]], true)
-require'plugins.lightbulb'
-time([[Config for nvim-lightbulb]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require'plugins.indent-blankline'
-time([[Config for indent-blankline.nvim]], false)
--- Config for: nvim-dap
-time([[Config for nvim-dap]], true)
-require'plugins.nvim-dap'
-time([[Config for nvim-dap]], false)
+-- Config for: nvim-gps
+time([[Config for nvim-gps]], true)
+require'plugins.nvim-gps'
+time([[Config for nvim-gps]], false)
 -- Config for: formatter.nvim
 time([[Config for formatter.nvim]], true)
 require'plugins.formatter'
 time([[Config for formatter.nvim]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+require'plugins.harpoon'
+time([[Config for harpoon]], false)
+-- Config for: focus.nvim
+time([[Config for focus.nvim]], true)
+require'plugins.focus'
+time([[Config for focus.nvim]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require'plugins.feline'
+time([[Config for feline.nvim]], false)
+-- Config for: nvim-lightbulb
+time([[Config for nvim-lightbulb]], true)
+require'plugins.lightbulb'
+time([[Config for nvim-lightbulb]], false)
+-- Config for: editorconfig-vim
+time([[Config for editorconfig-vim]], true)
+require'plugins.editorconfig'
+time([[Config for editorconfig-vim]], false)
+-- Config for: numb.nvim
+time([[Config for numb.nvim]], true)
+require'plugins.numb'
+time([[Config for numb.nvim]], false)
+-- Config for: copilot.vim
+time([[Config for copilot.vim]], true)
+require'plugins.copilot'
+time([[Config for copilot.vim]], false)
+-- Config for: null-ls.nvim
+time([[Config for null-ls.nvim]], true)
+require'plugins.null-ls'
+time([[Config for null-ls.nvim]], false)
+-- Config for: neoscroll.nvim
+time([[Config for neoscroll.nvim]], true)
+require'plugins.neoscroll'
+time([[Config for neoscroll.nvim]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+require'plugins.nvim-dap-virtual-text'
+time([[Config for nvim-dap-virtual-text]], false)
+-- Config for: minimap.vim
+time([[Config for minimap.vim]], true)
+require'plugins.minimap'
+time([[Config for minimap.vim]], false)
+-- Config for: zen-mode.nvim
+time([[Config for zen-mode.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
+time([[Config for zen-mode.nvim]], false)
+-- Config for: lightspeed.nvim
+time([[Config for lightspeed.nvim]], true)
+require'plugins.lightspeed'
+time([[Config for lightspeed.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require'plugins.indent-blankline'
+time([[Config for indent-blankline.nvim]], false)
+-- Config for: octo.nvim
+time([[Config for octo.nvim]], true)
+require'plugins.octo'
+time([[Config for octo.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+require'plugins.alpha-nvim'
+time([[Config for alpha-nvim]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+require'plugins.nvim-neoclip'
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+require'plugins.todo-comments'
+time([[Config for todo-comments.nvim]], false)
+-- Config for: vim-rooter
+time([[Config for vim-rooter]], true)
+require'plugins.vim-rooter'
+time([[Config for vim-rooter]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require'plugins.nvim-notify'
+time([[Config for nvim-notify]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require'plugins.gitsigns'
+time([[Config for gitsigns.nvim]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+require'plugins.nvim-dap'
+time([[Config for nvim-dap]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+require'plugins.colorizer'
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: nvim-ts-rainbow
+time([[Config for nvim-ts-rainbow]], true)
+require'plugins.nvim-ts-rainbow'
+time([[Config for nvim-ts-rainbow]], false)
+-- Config for: vim-ultest
+time([[Config for vim-ultest]], true)
+require'plugins.ultest'
+time([[Config for vim-ultest]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require'plugins.toggleterm'
+time([[Config for toggleterm.nvim]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+require'plugins.nvim-dap-ui'
+time([[Config for nvim-dap-ui]], false)
+-- Config for: stabilize.nvim
+time([[Config for stabilize.nvim]], true)
+require'plugins.stabilize'
+time([[Config for stabilize.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

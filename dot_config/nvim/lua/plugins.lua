@@ -100,11 +100,9 @@ return require('packer').startup({function(use)
   use { 'nvim-telescope/telescope-project.nvim' }
   use { 'nvim-telescope/telescope-dap.nvim' }
   use { 'pwntester/octo.nvim', config = lua_path"octo" }
-  use {
-    "nvim-telescope/telescope-arecibo.nvim",
-    rocks = {"openssl", "lua-http-parser"}
-  }
-
+  use { "nvim-telescope/telescope-bibtex.nvim" }
+  use { "nvim-telescope/telescope-github.nvim" }
+  use { "nvim-telescope/telescope-packer.nvim" }
   -- Explorer
   use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
 
@@ -174,6 +172,7 @@ return require('packer').startup({function(use)
   -- General Plugins
   use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
   use { 'airblade/vim-rooter', config = lua_path"vim-rooter" }
+  use { 'lewis6991/impatient.nvim' }
   -- use { 'mhinz/vim-startify' }
   use { 'goolord/alpha-nvim', config = lua_path"alpha-nvim" }
   use { 'jeffkreeftmeijer/vim-numbertoggle' }
@@ -188,6 +187,7 @@ return require('packer').startup({function(use)
   use { "folke/which-key.nvim" }
   use { "cespare/vim-toml" }
   use {"akinsho/toggleterm.nvim", config = lua_path'toggleterm'}
+  use { 'voldikss/vim-browser-search' }
 
   use {
     "folke/zen-mode.nvim",
@@ -210,6 +210,7 @@ return require('packer').startup({function(use)
       }
     end
   }
+
 
 end,
 config = {

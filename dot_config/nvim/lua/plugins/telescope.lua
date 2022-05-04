@@ -48,7 +48,9 @@ telescope.load_extension('neoclip')
 telescope.load_extension('notify')
 telescope.load_extension('harpoon')
 telescope.load_extension('dap')
-telescope.load_extension("arecibo")
+telescope.load_extension("bibtex")
+telescope.load_extension("gh")
+telescope.load_extension("packer")
 
 -- Implement delta as previewer for diffs
 

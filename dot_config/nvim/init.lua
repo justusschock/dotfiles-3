@@ -1,4 +1,5 @@
 -- Packer
+pcall(require, "impatient") -- Speeding things up
 require('plugins')
 require('settings')
 require('settings.color')
