@@ -100,6 +100,10 @@ return require('packer').startup({function(use)
   use { 'nvim-telescope/telescope-project.nvim' }
   use { 'nvim-telescope/telescope-dap.nvim' }
   use { 'pwntester/octo.nvim', config = lua_path"octo" }
+  use {
+    "nvim-telescope/telescope-arecibo.nvim",
+    rocks = {"openssl", "lua-http-parser"}
+  }
 
   -- Explorer
   use { 'kyazdani42/nvim-tree.lua', config = lua_path"nvimtree" }
