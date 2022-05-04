@@ -149,7 +149,7 @@ formatters.setup {
 -- -- set additional linters
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { exe = "flake8" },
+  -- { exe = "flake8" },
   { exe = "shellcheck", args = { "--severity", "warning"} },
   { exe = "codespell" },
   { exe = "mypy" },
