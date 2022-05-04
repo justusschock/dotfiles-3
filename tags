@@ -1,0 +1,241 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/Users/justusschock/.local/share/chezmoi/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	/d9064889/
+$	dot_config/nvim/old_init.vim	/^nnoremap $ <nop>$/;"	m
+0	dot_config/nvim/coc-settings.json	/^                "args": ["start"],$/;"	s	array:bash.args
+0	dot_config/nvim/coc-settings.json	/^                "filetypes": ["go"]$/;"	s	array:golang.filetypes
+0	dot_config/nvim/coc-settings.json	/^                "filetypes": ["sh"]$/;"	s	array:bash.filetypes
+0	dot_config/nvim/coc-settings.json	/^                "rootPatterns": ["go.mod"],$/;"	s	array:golang.rootPatterns
+0	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	s	array:insecure-registries
+<C-n>	dot_config/nvim/old_init.vim	/^nnoremap <C-n> :call NERDTreeFindToggle()<CR>$/;"	m
+<C-s>	dot_config/nvim/old_init.vim	/^nmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
+<C-s>	dot_config/nvim/old_init.vim	/^xmap <silent> <C-s> <Plug>(coc-range-select)$/;"	m
+<F6>	dot_config/nvim/old_init.vim	/^nmap <F6> :ALEFix<CR>$/;"	m
+<Leader>d	dot_config/nvim/old_init.vim	/^nmap <silent> <Leader>d <Plug>(pydocstring)$/;"	m
+<S-TAB>	dot_config/nvim/old_init.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<TAB>	dot_config/nvim/old_init.vim	/^inoremap <silent><expr> <TAB>$/;"	m
+<c-@>	dot_config/nvim/old_init.vim	/^  inoremap <silent><expr> <c-@> coc#refresh()$/;"	m
+<c-space>	dot_config/nvim/old_init.vim	/^  inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
+<cr>	dot_config/nvim/old_init.vim	/^inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()$/;"	m
+<leader><space>	dot_config/nvim/old_init.vim	/^nnoremap <leader><space> :nohlsearch<CR>$/;"	m
+<leader>a	dot_config/nvim/old_init.vim	/^nmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
+<leader>a	dot_config/nvim/old_init.vim	/^nnoremap <leader>a :Ag$/;"	m
+<leader>a	dot_config/nvim/old_init.vim	/^xmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
+<leader>ac	dot_config/nvim/old_init.vim	/^nmap <leader>ac  <Plug>(coc-codeaction)$/;"	m
+<leader>et	dot_config/nvim/old_init.vim	/^nnoremap <leader>et :vsp ~\/.tmux.conf$/;"	m
+<leader>ev	dot_config/nvim/old_init.vim	/^nnoremap <leader>ev :vsp ~\/.config\/nvim\/init.vim<CR>$/;"	m
+<leader>ez	dot_config/nvim/old_init.vim	/^nnoremap <leader>ez :vsp ~\/.zshrc<CR>$/;"	m
+<leader>f	dot_config/nvim/old_init.vim	/^nmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>f	dot_config/nvim/old_init.vim	/^xmap <leader>f  <Plug>(coc-format-selected)$/;"	m
+<leader>qf	dot_config/nvim/old_init.vim	/^nmap <leader>qf  <Plug>(coc-fix-current)$/;"	m
+<leader>rn	dot_config/nvim/old_init.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
+<leader>s	dot_config/nvim/old_init.vim	/^nnoremap <leader>s :mksession<CR>$/;"	m
+<leader>sv	dot_config/nvim/old_init.vim	/^nnoremap <leader>sv :source ~\/.config\/nvim\/init.vim<CR>$/;"	m
+<leader>u	dot_config/nvim/old_init.vim	/^nnoremap <leader>u :GundoToggle<CR>$/;"	m
+<space>	dot_config/nvim/old_init.vim	/^nnoremap <space> za$/;"	m
+<space>a	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>$/;"	m
+<space>c	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>$/;"	m
+<space>e	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>$/;"	m
+<space>j	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>$/;"	m
+<space>k	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>$/;"	m
+<space>o	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>$/;"	m
+<space>p	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>$/;"	m
+<space>s	dot_config/nvim/old_init.vim	/^nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
+B	dot_config/nvim/old_init.vim	/^nnoremap B ^$/;"	m
+Dependencies	dot_config/nvim/README.md	/^## Dependencies$/;"	s	chapter:Neovim config
+E	dot_config/nvim/old_init.vim	/^nnoremap E \$$/;"	m
+EnvironmentVariables	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>EnvironmentVariables<\/key>$/;"	k
+EnvironmentVariables	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>EnvironmentVariables<\/key>$/;"	k
+Fold	dot_config/nvim/old_init.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
+Format	dot_config/nvim/old_init.vim	/^command! -nargs=0 Format :call CocAction('format')$/;"	c
+Hour	private_Library/LaunchAgents/Empty Daily Temp.plist	/^			<key>Hour<\/key>$/;"	k	key:StartCalendarInterval
+Hour	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^			<key>Hour<\/key>$/;"	k	key:StartCalendarInterval
+K	dot_config/nvim/old_init.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
+KeepAlive	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>KeepAlive<\/key>$/;"	k
+KeepAlive	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>KeepAlive<\/key>$/;"	k
+Label	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>Label<\/key>$/;"	k
+Label	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>Label<\/key>$/;"	k
+LinterStatus	dot_config/nvim/old_init.vim	/^function! LinterStatus() abort$/;"	f
+Minute	private_Library/LaunchAgents/Empty Daily Temp.plist	/^			<key>Minute<\/key>$/;"	k	key:StartCalendarInterval
+Minute	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^			<key>Minute<\/key>$/;"	k	key:StartCalendarInterval
+NERDTreeFindToggle	dot_config/nvim/old_init.vim	/^function! NERDTreeFindToggle()$/;"	f
+NERDTreeMinimalUI	dot_config/nvim/old_init.vim	/^let NERDTreeMinimalUI = 1$/;"	v
+Neovim config	dot_config/nvim/README.md	/^# Neovim config$/;"	c
+OR	dot_config/nvim/old_init.vim	/^command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')$/;"	c
+PATH	private_Library/LaunchAgents/Empty Daily Temp.plist	/^		<key>PATH<\/key>$/;"	k	key:EnvironmentVariables
+PATH	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^		<key>PATH<\/key>$/;"	k	key:EnvironmentVariables
+ProgramArguments	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>ProgramArguments<\/key>$/;"	k
+ProgramArguments	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>ProgramArguments<\/key>$/;"	k
+Remaining TODO	dot_config/nvim/README.md	/^## Remaining TODO$/;"	s	chapter:Neovim config
+RunAtLoad	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>RunAtLoad<\/key>$/;"	k
+RunAtLoad	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>RunAtLoad<\/key>$/;"	k
+StartCalendarInterval	private_Library/LaunchAgents/Empty Daily Temp.plist	/^	<key>StartCalendarInterval<\/key>$/;"	k
+StartCalendarInterval	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^	<key>StartCalendarInterval<\/key>$/;"	k
+StripTrailingWhitespaces	dot_config/nvim/old_init.vim	/^function! <SID>StripTrailingWhitespaces()$/;"	f
+SuccessfulExit	private_Library/LaunchAgents/Empty Daily Temp.plist	/^		<key>SuccessfulExit<\/key>$/;"	k	key:KeepAlive
+SuccessfulExit	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^		<key>SuccessfulExit<\/key>$/;"	k	key:KeepAlive
+ToggleNumber	dot_config/nvim/old_init.vim	/^function! ToggleNumber()$/;"	f
+Weekday	private_Library/LaunchAgents/Empty Weekly Temp.plist	/^			<key>Weekday<\/key>$/;"	k	key:StartCalendarInterval
+["method-name"]	dot_config/nvim/lua/plugins/nvim-gps.lua	/^    ["method-name"] = ' ',     -- Methods (functions inside class-like objects)$/;"	f
+['<S-Tab>']	dot_config/nvim/lua/plugins/nvim-cmp.lua	/^    ['<S-Tab>'] = function(fallback)$/;"	f
+['<Tab>']	dot_config/nvim/lua/plugins/nvim-cmp.lua	/^    ['<Tab>'] = function(fallback)$/;"	f
+[g	dot_config/nvim/old_init.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+]g	dot_config/nvim/old_init.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+^	dot_config/nvim/old_init.vim	/^nnoremap ^ <nop>$/;"	m
+_activate_conda_env	dot_config/nvim/lua/plugins/telescope.lua	/^function _activate_conda_env()$/;"	f
+_lazygit_toggle	dot_config/nvim/lua/plugins/toggleterm.lua	/^function _lazygit_toggle()$/;"	f
+ac	dot_config/nvim/old_init.vim	/^omap ac <Plug>(coc-classobj-a)$/;"	m
+ac	dot_config/nvim/old_init.vim	/^xmap ac <Plug>(coc-classobj-a)$/;"	m
+af	dot_config/nvim/old_init.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
+af	dot_config/nvim/old_init.vim	/^xmap af <Plug>(coc-funcobj-a)$/;"	m
+args	dot_config/nvim/coc-settings.json	/^                "args": ["start"],$/;"	a	object:bash
+auths	dot_docker/config.json	/^  "auths" : {$/;"	o
+bash	dot_config/nvim/coc-settings.json	/^        "bash": {$/;"	o
+before	dot_config/nvim/lua/settings/completion.lua	/^      before = function (entry, vim_item)$/;"	f
+bg	dot_tmux.conf	/^set -g pane-active-border-style 'bg=colour0 fg=colour9'$/;"	k
+bg	dot_tmux.conf	/^set -g status-style 'bg=colour18 fg=colour137 dim'$/;"	k
+buf_set_keymap	dot_config/nvim/lua/plugins/nvim-lspconfig.lua	/^  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end$/;"	f
+buf_set_option	dot_config/nvim/lua/plugins/nvim-lspconfig.lua	/^  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end$/;"	f
+buffer_not_empty	dot_config/nvim/lua/plugins/feline.lua	/^local buffer_not_empty = function()$/;"	f
+buffer_not_empty	dot_config/nvim/lua/plugins/galaxyline.lua	/^local buffer_not_empty = function()$/;"	f
+builder	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	o
+buildkit	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	b	object:features
+callback	dot_config/nvim/lua/settings/init.lua	/^  callback =  function()$/;"	f
+callback	dot_config/nvim/lua/settings/init.lua	/^  callback = function()$/;"	f
+checkwidth	dot_config/nvim/lua/plugins/feline.lua	/^local checkwidth = function()$/;"	f
+checkwidth	dot_config/nvim/lua/plugins/galaxyline.lua	/^local checkwidth = function()$/;"	f
+clone https	dot_tmux.conf	/^if "test ! -d ~\/.tmux\/plugins\/tpm" "run 'git clone https:\/\/github.com\/tmux-plugins\/tpm ~\//;"	k
+command	dot_config/nvim/coc-settings.json	/^                "command": "bash-language-server",$/;"	s	object:bash
+command	dot_config/nvim/coc-settings.json	/^                "command": "gopls",$/;"	s	object:golang
+config	dot_config/lvim/config.lua	/^      config = function() require"lsp_signature".on_attach() end,$/;"	f
+config	dot_config/lvim/config.lua	/^      config = function()$/;"	f
+config	dot_config/nvim/lua/plugins.lua	/^    config = function()$/;"	f
+config	dot_config/nvim/lua/plugins/packer.lua	/^    config = function ()$/;"	f
+config	dot_config/nvim/lua/plugins/packer.lua	/^    config = function() require'nvim-tree'.setup {} end}$/;"	f
+config	dot_config/nvim/lua/plugins/packer.lua	/^    config = function()$/;"	f
+config_test	dot_config/nvim/lua/plugins/ultest.lua	/^local function config_test()$/;"	f
+config_ultest	dot_config/nvim/lua/plugins/ultest.lua	/^  local function config_ultest()$/;"	f
+credsStore	dot_docker/config.json	/^  "credsStore" : "desktop",$/;"	s
+css_fn	dot_config/nvim/lua/plugins/colorizer.lua	/^  css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn$/;"	f
+defaultKeepStorage	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	s	object:builder.gc
+dotfiles	README.md	/^# dotfiles$/;"	c
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return gps.is_available() end,$/;"	f
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.ERROR) end,$/;"	f
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.HINT) end,$/;"	f
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.INFO) end,$/;"	f
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return lsp.diagnostics_exist(vim.diagnostic.severity.WARN) end,$/;"	f
+enabled	dot_config/nvim/lua/plugins/feline.lua	/^  enabled = function() return vim.fn.getfsize(vim.fn.expand('%:t')) > 0 end,$/;"	f
+enabled	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	b	object:builder.gc
+error_msg	dot_config/lvim/plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
+error_msg	dot_config/nvim/plugin/packer_compiled.lua	/^local no_errors, error_msg = pcall(function()$/;"	f
+event_exited["dapui_config"]	dot_config/nvim/lua/plugins/nvim-dap-ui.lua	/^  dap.listeners.before.event_exited["dapui_config"] = function()$/;"	f	unknown:dap.listeners.before
+event_initialized["dapui_config"]	dot_config/nvim/lua/plugins/nvim-dap-ui.lua	/^dap.listeners.after.event_initialized["dapui_config"] = function()$/;"	f	unknown:dap.listeners.after
+event_terminated["dapui_config"]	dot_config/nvim/lua/plugins/nvim-dap-ui.lua	/^  dap.listeners.before.event_terminated["dapui_config"] = function()$/;"	f	unknown:dap.listeners.before
+expand	dot_config/nvim/lua/plugins/nvim-cmp.lua	/^    expand = function(args)$/;"	f
+expand	dot_config/nvim/lua/settings/completion.lua	/^    expand = function(args)$/;"	f
+experimental	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	b
+features	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	o
+fg	dot_tmux.conf	/^set -g message-style 'fg=colour232 bg=colour16 bold'$/;"	k
+fg	dot_tmux.conf	/^set -g pane-border-style 'fg=colour19 bg=colour0'$/;"	k
+fg	dot_tmux.conf	/^setw -g mode-style 'fg=colour1 bg=colour18 bold'$/;"	k
+fg	dot_tmux.conf	/^setw -g window-status-bell-style 'fg=colour255 bg=colour1 bold'$/;"	k
+fg	dot_tmux.conf	/^setw -g window-status-current-style 'fg=colour1 bg=colour19 bold'$/;"	k
+fg	dot_tmux.conf	/^setw -g window-status-style 'fg=colour9 bg=colour18'$/;"	k
+file_button	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^local function file_button(fn, sc, short_fn)$/;"	f
+filetypes	dot_config/nvim/coc-settings.json	/^                "filetypes": ["go"]$/;"	a	object:golang
+filetypes	dot_config/nvim/coc-settings.json	/^                "filetypes": ["sh"]$/;"	a	object:bash
+fn	dot_config/nvim/lua/settings.lua	/^local fn = vim.fn       				-- call Vim functions$/;"	f
+footer	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^local function footer()$/;"	f
+g:NERDCommentEmptyLines	dot_config/nvim/old_init.vim	/^let g:NERDCommentEmptyLines = 1$/;"	v
+g:NERDCompactSexyComs	dot_config/nvim/old_init.vim	/^let g:NERDCompactSexyComs = 1$/;"	v
+g:NERDCreateDefaultMappings	dot_config/nvim/old_init.vim	/^let g:NERDCreateDefaultMappings = 1$/;"	v
+g:NERDDefaultAlign	dot_config/nvim/old_init.vim	/^let g:NERDDefaultAlign = 'left'$/;"	v
+g:NERDSpaceDelims	dot_config/nvim/old_init.vim	/^let g:NERDSpaceDelims = 1$/;"	v
+g:NERDToggleCheckAllLines	dot_config/nvim/old_init.vim	/^let g:NERDToggleCheckAllLines = 1$/;"	v
+g:NERDTrimTrailingWhitespace	dot_config/nvim/old_init.vim	/^let g:NERDTrimTrailingWhitespace = 1$/;"	v
+g:ale_echo_msg_error_str	dot_config/nvim/old_init.vim	/^let g:ale_echo_msg_error_str = 'E'$/;"	v
+g:ale_echo_msg_format	dot_config/nvim/old_init.vim	/^let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'$/;"	v
+g:ale_echo_msg_warning_str	dot_config/nvim/old_init.vim	/^let g:ale_echo_msg_warning_str = 'W'$/;"	v
+g:ale_fix_on_save	dot_config/nvim/old_init.vim	/^let g:ale_fix_on_save = 0$/;"	v
+g:ale_fixers	dot_config/nvim/old_init.vim	/^let g:ale_fixers = {$/;"	v
+g:ale_linters	dot_config/nvim/old_init.vim	/^let g:ale_linters = {$/;"	v
+g:ale_python_flake8_options	dot_config/nvim/old_init.vim	/^let g:ale_python_flake8_options = '--max-line-length=120'$/;"	v
+g:ale_python_pylint_options	dot_config/nvim/old_init.vim	/^let g:ale_python_pylint_options = '--max-line-length=120'$/;"	v
+g:aut_save_events	dot_config/nvim/old_init.vim	/^let g:aut_save_events = ["InsertLeave", "TextChanged"]$/;"	v
+g:auto_save	dot_config/nvim/old_init.vim	/^let g:auto_save = 1 " enable autosave on startup$/;"	v
+g:ctrlp_match_window	dot_config/nvim/old_init.vim	/^let g:ctrlp_match_window = 'bottom,order:ttb'$/;"	v
+g:ctrlp_switch_buffer	dot_config/nvim/old_init.vim	/^let g:ctrlp_switch_buffer = 0$/;"	v
+g:ctrlp_user_command	dot_config/nvim/old_init.vim	/^let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'$/;"	v
+g:ctrlp_working_path_mode	dot_config/nvim/old_init.vim	/^let g:ctrlp_working_path_mode = 0$/;"	v
+g:indentLine_setColors	dot_config/nvim/old_init.vim	/^let g:indentLine_setColors = 0$/;"	v
+g:pydocstring_doq_path	dot_config/nvim/old_init.vim	/^let g:pydocstring_doq_path = '~\/.local\/bin\/doq'$/;"	v
+g:pydocstring_formatter	dot_config/nvim/old_init.vim	/^let g:pydocstring_formatter = 'google'$/;"	v
+gV	dot_config/nvim/old_init.vim	/^nnoremap gV `[v`]$/;"	m
+gc	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	o	object:builder
+gd	dot_config/nvim/old_init.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+get_base_path	dot_config/nvim/lua/plugins/telescope.lua	/^local function get_base_path (path)$/;"	f
+get_command	dot_config/nvim/lua/plugins/telescope.lua	/^  get_command = function(entry)$/;"	f
+get_extension	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^local function get_extension(fn)$/;"	f
+gi	dot_config/nvim/old_init.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
+git.lfb.rwth-aachen.de:5000	dot_docker/config.json	/^    "git.lfb.rwth-aachen.de:5000" : {$/;"	o	object:auths
+golang	dot_config/nvim/coc-settings.json	/^        "golang": {$/;"	o
+gr	dot_config/nvim/old_init.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
+gy	dot_config/nvim/old_init.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
+hl	dot_config/nvim/lua/plugins/feline.lua	/^  hl = function()$/;"	f
+hsl_fn	dot_config/nvim/lua/plugins/colorizer.lua	/^  hsl_fn   = true;         -- CSS hsl() and hsla() functions$/;"	f
+https://index.docker.io/v1/	dot_docker/config.json	/^    "https:\/\/index.docker.io\/v1\/" : {$/;"	o	object:auths
+ic	dot_config/nvim/old_init.vim	/^omap ic <Plug>(coc-classobj-i)$/;"	m
+ic	dot_config/nvim/old_init.vim	/^xmap ic <Plug>(coc-classobj-i)$/;"	m
+icon	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^local function icon(fn)$/;"	f
+if	dot_config/nvim/old_init.vim	/^omap if <Plug>(coc-funcobj-i)$/;"	m
+if	dot_config/nvim/old_init.vim	/^xmap if <Plug>(coc-funcobj-i)$/;"	m
+ignore	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^  ignore = function(path, ext)$/;"	f
+insecure-registries	dot_docker/daemon.json	/^{"builder":{"gc":{"defaultKeepStorage":"20GB","enabled":true}},"experimental":false,"features":{/;"	a
+j	dot_config/nvim/old_init.vim	/^nnoremap j gj$/;"	m
+jk	dot_config/nvim/old_init.vim	/^inoremap jk <esc>$/;"	m
+k	dot_config/nvim/old_init.vim	/^nnoremap k gk$/;"	m
+lua_path	dot_config/nvim/lua/plugins.lua	/^  local lua_path = function(name)$/;"	f
+mapleader	dot_config/nvim/old_init.vim	/^let mapleader=","       " leader is comma$/;"	v
+mru	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^local function mru(start, cwd, items_number, opts)$/;"	f
+my_git_bcommits	dot_config/nvim/lua/plugins/telescope.lua	/^M.my_git_bcommits = function(opts)$/;"	f	unknown:M
+my_git_commits	dot_config/nvim/lua/plugins/telescope.lua	/^M.my_git_commits = function(opts)$/;"	f	unknown:M
+my_git_status	dot_config/nvim/lua/plugins/telescope.lua	/^M.my_git_status = function(opts)$/;"	f	unknown:M
+my_note	dot_config/nvim/lua/plugins/telescope.lua	/^M.my_note = function(opts)$/;"	f	unknown:M
+mygroup	dot_config/nvim/old_init.vim	/^augroup mygroup$/;"	a
+on_attach	dot_config/nvim/lua/plugins/null-ls.lua	/^    on_attach = function(client, bufnr)$/;"	f
+on_attach	dot_config/nvim/lua/plugins/nvim-lspconfig.lua	/^local on_attach = function(client, bufnr)$/;"	f
+on_open	dot_config/nvim/lua/plugins/toggleterm.lua	/^    on_open = function(term)$/;"	f
+project_files	dot_config/nvim/lua/plugins/telescope.lua	/^M.project_files = function()$/;"	f	unknown:M
+provider	dot_config/nvim/lua/plugins/feline.lua	/^  provider = function() return '' .. vim.bo.fileformat:upper() .. '' end,$/;"	f
+provider	dot_config/nvim/lua/plugins/feline.lua	/^  provider = function() return gps.get_location() end,$/;"	f
+provider	dot_config/nvim/lua/plugins/feline.lua	/^  provider = function()$/;"	f
+provider	dot_config/nvim/lua/plugins/galaxyline.lua	/^    provider = function () return '' end$/;"	f
+provider	dot_config/nvim/lua/plugins/galaxyline.lua	/^    provider = function() return ' ' end,$/;"	f
+provider	dot_config/nvim/lua/plugins/galaxyline.lua	/^    provider = function()$/;"	f
+python.formatting.provider	dot_config/nvim/coc-settings.json	/^        "python.formatting.provider": "black",$/;"	s
+python.venvPath	dot_config/nvim/coc-settings.json	/^        "python.venvPath": "\/opt\/homebrew\/Caskroom\/miniconda\/base\/envs\/"$/;"	s
+python_debugger	dot_config/nvim/lua/plugins/ultest.lua	/^local function python_debugger(cmd)$/;"	f
+rgb_fn	dot_config/nvim/lua/plugins/colorizer.lua	/^  rgb_fn   = true;         -- CSS rgb() and rgba() functions$/;"	f
+rootPatterns	dot_config/nvim/coc-settings.json	/^                "rootPatterns": ["go.mod"],$/;"	a	object:golang
+s:check_back_space	dot_config/nvim/old_init.vim	/^function! s:check_back_space() abort$/;"	f
+s:show_documentation	dot_config/nvim/old_init.vim	/^function! s:show_documentation()$/;"	f
+save_profiles	dot_config/lvim/plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
+save_profiles	dot_config/nvim/plugin/packer_compiled.lua	/^local function save_profiles(threshold)$/;"	f
+separator_highlight	dot_config/nvim/lua/plugins/galaxyline.lua	/^  separator_highlight = {colors.yellow,function()$/;"	f
+setup	dot_config/nvim/lua/settings/keymap.lua	/^function M.setup()$/;"	f	unknown:M
+time	dot_config/lvim/plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
+time	dot_config/lvim/plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
+time	dot_config/nvim/plugin/packer_compiled.lua	/^    time = function(chunk, start) end$/;"	f
+time	dot_config/nvim/plugin/packer_compiled.lua	/^    time = function(chunk, start)$/;"	f
+try_loadstring	dot_config/lvim/plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
+try_loadstring	dot_config/nvim/plugin/packer_compiled.lua	/^local function try_loadstring(s, component, name)$/;"	f
+ts_settings	dot_config/nvim/lua/plugins/nvim-lspconfig.lua	/^local ts_settings = function(client)$/;"	f
+val	dot_config/nvim/lua/plugins/alpha-nvim.lua	/^      val = function()$/;"	f
