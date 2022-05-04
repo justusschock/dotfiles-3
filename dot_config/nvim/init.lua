@@ -1,30 +1,11 @@
---[[
-
-  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
-  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
-  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
-  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
-  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
-  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
-
-
-Neovim init file
-Adapted From: https://github.com/brainfucksec/neovim-lua
---]]
-
------------------------------------------------------------
--- Import Lua modules
------------------------------------------------------------
+-- Packer
+require('plugins')
 require('settings')
-require('keymaps')
-require('plugins/packer')
-require('plugins/nvim-tree')
-require('plugins/indent-blankline')
-require('plugins/feline')
-require('plugins/vista')
-require('plugins/nvim-cmp')
-require('plugins/nvim-lspconfig')
-require('plugins/nvim-treesitter')
-require('plugins/dap-nvim')
-require('plugins/formatter')
-require('plugins/alpha-nvim')
+require('settings.color')
+require('settings.font')
+require('settings.completion')
+require('settings.filetype')
+-- LSP Config
+require('lsp')
+-- Keymap
+require('settings.keymap').setup()

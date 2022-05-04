@@ -1,25 +1,9 @@
------------------------------------------------------------
--- Indent line configuration file
------------------------------------------------------------
-
--- Plugin: indent-blankline
--- https://github.com/lukas-reineke/indent-blankline.nvim
-
-
-require('indent_blankline').setup {
-    char = "▏",
-    show_first_indent_level = false,
-    filetype_exclude = {
-      'help',
-      'git',
-      'markdown',
-      'text',
-      'terminal',
-      'lspinfo',
-      'packer'
-    },
-    buftype_exclude = {
-      'terminal',
-      'nofile'
-    },
-  }
+require("indent_blankline").setup {
+  buftype_exclude = {'terminal'},
+  filetype_exclude = {'help', 'startify', 'alpha', 'dashboard', 'packer', 'neogitstatus', 'NvimTree'},
+  char = '▏',
+  show_current_context = true,
+  show_current_context_start = true,  -- underline first line
+  use_treesitter = true,
+  show_trailing_blankline_indent = false,
+}
