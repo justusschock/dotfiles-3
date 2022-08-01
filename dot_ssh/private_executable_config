@@ -1,0 +1,96 @@
+
+Host *
+    AddKeysToAgent yes
+    ForwardAgent yes
+    IdentitiesOnly yes
+    IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host srv1
+    HostName srv1.lfb.rwth-aachen.de
+    Port 8022
+    User schock
+    ServerAliveInterval 60
+    ServerAliveCountMax 10
+    IdentityFile "~/.ssh/ssh_srv1_lfb.pub"
+
+Match host nic
+    Hostname nic
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host nic !exec "nc -z -w 1 nic 22"
+    Hostname nic
+    User schock
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host klausuren
+    Hostname nic
+    User git
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host klausuren !exec "nc -z -w 1 klausuren 22"
+    Hostname nic
+    User git
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+
+Match host pc34
+    Hostname pc34
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host pc34 !exec "nc -z -w 1 %h 22"
+    Hostname pc34
+    User schock
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+
+Match host pc44
+    Hostname pc44
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host pc44 !exec "nc -z -w 1 %h 22"
+    Hostname pc44
+    User schock
+    IdentitiesOnly yes
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+
+Match host pc*
+    Hostname %h
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host pc* !exec "nc -z -w 1 %h 22"
+    Hostname %h
+    User schock
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host filesrv
+    Hostname filesrv
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host filesrv !exec "nc -z -w 1 filesrv 22"
+    Hostname filesrv
+    User schock
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host filesrv2
+    Hostname filesrv2
+    User schock
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
+Match host filesrv2 !exec "nc -z -w 1 filesrv2 22"
+    Hostname filesrv2
+    User schock
+    ProxyCommand ssh srv1 nc -q0 %h 22
+    IdentityFile "~/.ssh/ssh_intern_lfb.pub"
+
