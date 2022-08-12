@@ -11,6 +11,17 @@ cmd({ "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
   pattern = { "*" },
 })
 
+cmd("FileType", {
+  desc = "Dump Servername to /tmp/curvimserver",
+  callback = function()
+    file = io.open("/tmp/curvimserver", "w")
+    io.output(file)
+    io.write(vim.v.servername)
+    io.close(file)
+  end,
+  pattern = "*.tex"
+})
+
 augroup("highlighturl", { clear = true })
 cmd({ "VimEnter", "FileType", "BufEnter", "WinEnter" }, {
   desc = "URL Highlighting",
@@ -80,6 +91,8 @@ if is_available "alpha-nvim" then
     end,
   })
 end
+
+
 
 if is_available "neo-tree.nvim" then
   augroup("neotree_start", { clear = true })

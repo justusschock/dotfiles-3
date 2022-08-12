@@ -115,8 +115,23 @@ local astro_plugins = {
     end,
   },
 
-  -- Snippet collection
-  ["rafamadriz/friendly-snippets"] = { opt = true },
+  -- Snippet engine 
+  -- ['dcampos/nvim-snippy'] = {
+  --   config = function()
+  --     require('snippy').setup({
+  --       mappings = {
+  --         is = {
+  --           ['<C-Tab>'] = 'expand_or_advance',
+  --           ['<S-Tab>'] = 'previous',
+  --         },
+  --         nx = {
+  --           ['<leader>x'] = 'cut_text',
+  --         },
+  --       },
+  --     })
+  --   end,
+  -- },
+
 
   -- Snippet engine
   ["L3MON4D3/LuaSnip"] = {
@@ -140,12 +155,17 @@ local astro_plugins = {
   },
 
   -- Snippet completion source
-  ["saadparwaiz1/cmp_luasnip"] = {
-    after = "nvim-cmp",
-    config = function()
-      astronvim.add_user_cmp_source "luasnip"
-    end,
-  },
+  -- ["dcampos/cmp-snippy"] = {
+  --   after = "nvim-cmp",
+  --   config = function()
+  --     astronvim.add_user_cmp_source "snippy"
+  --   end,
+  -- },
+
+  -- Snippet collections
+  -- ['honza/vim-snippets'] = {},
+  ["rafamadriz/friendly-snippets"] = { opt = true },
+
 
   -- Copilot Server
   ['zbirenbaum/copilot.lua'] = {
@@ -241,7 +261,7 @@ local astro_plugins = {
         null_ls.builtins.formatting.isort.with({
           extra_args = { "--profile", "black"}
         }),
-        null_ls.builtins.formatting.latexindent, -- brew install latexindent
+        -- null_ls.builtins.formatting.latexindent, -- brew install latexindent
         -- null_ls.builtins.formatting.prettier, -- brew install prettier
       }
 
@@ -358,6 +378,7 @@ local astro_plugins = {
 
   -- Start screen
   ["goolord/alpha-nvim"] = {
+    after = "nvim-web-devicons",
     cmd = "Alpha",
     module = "alpha",
     config = function()
@@ -548,11 +569,33 @@ local astro_plugins = {
     end,
   },
 
-  ["Pocco81/AutoSave.nvim"] = {
+  ["Pocco81/auto-save.nvim"] = {
     config = function()
-      require('autosave').setup()
+      require('auto-save').setup()
     end,
   },
+
+  ["folke/todo-comments.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {}
+    end
+  },
+  ['s1n7ax/nvim-search-and-replace'] = {
+    config = function() 
+      require'nvim-search-and-replace'.setup() 
+    end,
+  },
+
+  -- ['lervag/vimtex'] = {
+  --   config = function()
+  --     vim.g.vimtex_view_method = 'skim'
+  --     vimg.g.vimtex_compiler_method = 'generic'
+  --     vim.g.vimtex_compiler_generic = {
+  --       command = 'docker run --ipc=host --rm -it -v ' .. vim.fn.getcwd() .. ':/workdir -u $(id -u ${USER}):$(id -g ${USER}) justusschock/diss_tex:latest make'
+  --     }
+  --   end,
+  -- }
 
 }
 if astronvim.updater.snapshot then
