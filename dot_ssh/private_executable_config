@@ -94,3 +94,8 @@ Match host filesrv2 !exec "nc -z -w 1 filesrv2 22"
     ProxyCommand ssh srv1 nc -q0 %h 22
     IdentityFile "~/.ssh/ssh_intern_lfb.pub"
 
+Host github.com
+    Hostname github.com
+    User git
+    IdentityFile "~/.ssh/ssh_gh.pub"
+
