@@ -164,7 +164,7 @@ local astro_plugins = {
 
   -- Snippet collections
   -- ['honza/vim-snippets'] = {},
-  ["rafamadriz/friendly-snippets"] = { opt = true },
+  -- ["rafamadriz/friendly-snippets"] = { opt = true },
 
 
   -- Copilot Server
