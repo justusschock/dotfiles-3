@@ -163,6 +163,9 @@ chflags nohidden ~/Library
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+# Set dock animation time to 0
+defaults write com.apple.dock autohide-time-modifier -int 0
+
 # Set the icon size of Dock items
 defaults write com.apple.dock tilesize -int 30
 
