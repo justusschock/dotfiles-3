@@ -152,7 +152,6 @@ cask "netron"
 cask "notion", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
 cask "parallels", args: { appdir: "/Applications" }
-cask "paraview", args: { appdir: "/Applications" }
 cask "pycharm", args: { appdir: "/Applications" }
 cask "rar"
 cask "raycast"
@@ -163,7 +162,6 @@ cask "slack", args: { appdir: "/Applications" }
 cask "textsniper"
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "transmit", args: { appdir: "/Applications" }
-cask "tunnelblick", args: { appdir: "/Applications" }
 cask "typora", args: { appdir: "/Applications" }
 cask "veracrypt"
 cask "visual-studio-code"
