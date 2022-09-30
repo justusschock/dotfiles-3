@@ -7,19 +7,14 @@
 # export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-{{ if (eq .chezmoi.os "darwin") }}
 export ZSH="/Users/justusschock/.oh-my-zsh"
 
-{{ else }}
-export ZSH="/home/staff/schock/.oh-my-zsh"
-
-{{ end }}
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="passion"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -84,10 +79,7 @@ DISABLE_AUTO_UPDATE="true"
 plugins=(ansible brew docker dotenv git gitignore iterm2 keychain macos python sudo vscode ssh-agent)
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
-zstyle :omz:plugins:keychain agents gpg,ssh
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities lfb_srv1 id_github lfb_intern
-zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain --apple-load-keychain
+
 VSCODE=code
 
 source $ZSH/oh-my-zsh.sh
@@ -100,13 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-alias lvim="sh $HOME/.local/bin/lvim"
-export EDITOR='nvim'
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -119,10 +109,7 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lvim="sh $HOME/.local/bin/lvim"
-alias cd="z"
 
-{{ if (eq .chezmoi.os "darwin") }}
 # initialize zoxide
 eval "$(zoxide init zsh)"
 
@@ -140,25 +127,3 @@ else
     fi
 fi
 unset __conda_setup
-
-{{ else }}
-
-# >>> conda init >>>
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/work/scratch/schock/conda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/work/scratch/schock/conda/etc/profile.d/conda.sh" ]; then
-        . "/work/scratch/schock/conda/etc/profile.d/conda.sh"
-    else
-        export PATH="/work/scratch/schock/conda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-alias docker_userrun="docker run -u $(id -u ${USER}):$(id -g ${USER}) --rm --runtime=nvidia -it"
-
-{{ end }}
