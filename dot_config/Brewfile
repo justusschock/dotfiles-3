@@ -133,11 +133,9 @@ cask "github"
 cask "gitkraken", args: { appdir: "/Applications" }
 cask "google-chrome", args: { appdir: "/Applications" }
 cask "grandperspective", args: { appdir: "/Applications" }
-cask "horos"
 cask "iina"
 cask "imageoptim"
 cask "iterm2", args: { appdir: "/Applications" }
-cask "itk-snap", args: { appdir: "/Applications" }
 cask "jetbrains-toolbox"
 cask "julia"
 cask "linear-linear"
