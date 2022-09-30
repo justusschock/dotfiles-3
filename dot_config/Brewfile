@@ -9,7 +9,6 @@ tap "koekeishiya/formulae"
 tap "universal-ctags/universal-ctags"
 tap "buo/cask-upgrade"
 brew "act"
-brew "coreutils"
 brew "actionlint"
 brew "glib"
 brew "python@3.9"
@@ -172,3 +171,5 @@ cask "veracrypt"
 cask "visual-studio-code"
 cask "whatsapp", args: { appdir: "/Applications" }
 cask "zoom"
+
+mas "Velja", id: 1607635845
