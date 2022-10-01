@@ -167,7 +167,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock autohide-time-modifier -int 0
 
 # Set the icon size of Dock items
-defaults write com.apple.dock tilesize -int 30
+defaults write com.apple.dock tilesize -int 100
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.15
@@ -247,8 +247,6 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "${HOME}/.config/iTerm/settings"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
-defaults write com.googlecode.iterm2 com.googlecode.iterm2.
-
 
 ###############################################################################
 # Kill/restart affected applications                                          #
