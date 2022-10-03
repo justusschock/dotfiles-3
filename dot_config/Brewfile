@@ -70,7 +70,6 @@ brew "mackup"
 brew "mas"
 brew "midnight-commander"
 brew "miller"
-brew "miniconda"
 brew "mypy"
 brew "ncdu"
 brew "neovim"
@@ -170,3 +169,5 @@ cask "whatsapp", args: { appdir: "/Applications" }
 cask "zoom"
 
 mas "Velja", id: 1607635845
+mas "Magnet", id: 441258766
+mas "Things 3", id: 904280696
