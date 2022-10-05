@@ -149,6 +149,7 @@ cask "microsoft-office", args: { appdir: "/Applications" }
 cask "microsoft-remote-desktop"
 cask "monodraw", args: { appdir: "/Applications" }
 cask "mosaic"
+cask "meld"
 cask "netron"
 cask "notion", args: { appdir: "/Applications" }
 cask "obsidian", args: { appdir: "/Applications" }
