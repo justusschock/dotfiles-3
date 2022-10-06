@@ -7,8 +7,27 @@ Host *
 
 Host lightning18
     HostName 10.10.10.18
+
+Host lightning19
+    HostName 10.10.10.19
+
+Host lightning20
+    HostName 10.10.10.20
+
+Host lightning21
+    HostName 10.10.10.21
+
+Host lightning25
+    HostName 10.10.10.25
+
+Host lightning*
     User justus
     IdentityFile "~/.ssh/ssh_lightning_cluster.pub"
+
+Host lightning19
+    HostName 10.10.10.19
+    User justus
+    IdentityFile ""
 
 Host srv1
     HostName srv1.lfb.rwth-aachen.de
