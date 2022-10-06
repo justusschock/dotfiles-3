@@ -17,6 +17,9 @@ Host lightning20
 Host lightning21
     HostName 10.10.10.21
 
+Host lightning22
+    HostName 10.10.10.22
+
 Host lightning25
     HostName 10.10.10.25
 
