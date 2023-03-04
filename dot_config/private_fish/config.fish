@@ -16,6 +16,9 @@ else
   set -x EDITOR 'vim';
 end
 
+# load homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
