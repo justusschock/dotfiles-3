@@ -109,11 +109,28 @@ if has("bufferline.nvim") then
     map("n","b8", "<cmd>BufferLineGoToBuffer 8<cr>",  { desc = "Goto buffer 8" })
     map("n","b9", "<cmd>BufferLineGoToBuffer 9<cr>",  { desc = "Goto buffer 9" })
     map("n","bP", "<cmd>BufferLineTogglePin<cr>",  { desc = "Pin/Unpin buffer" })
+
+    map("n","<leader>bl", "<cmd>BufferLineCycleNext<cr>",  { desc = "Next buffer tab" })
+    map("n","<leader>bh", "<cmd>BufferLineCyclePrev<cr>",  { desc = "Previous buffer tab" })
+    map("n","<leader>>b", "<cmd>BufferLineMoveNext<cr>",  { desc = "Move buffer tab right" })
+    map("n","<leader><b", "<cmd>BufferLineMovePrev<cr>",  { desc = "Move buffer tab left" })
+    map("n","<leader>b1", "<cmd>BufferLineGoToBuffer 1<cr>",  { desc = "Goto buffer 1" })
+    map("n","<leader>b2", "<cmd>BufferLineGoToBuffer 2<cr>",  { desc = "Goto buffer 2" })
+    map("n","<leader>b3", "<cmd>BufferLineGoToBuffer 3<cr>",  { desc = "Goto buffer 3" })
+    map("n","<leader>b4", "<cmd>BufferLineGoToBuffer 4<cr>",  { desc = "Goto buffer 4" })
+    map("n","<leader>b5", "<cmd>BufferLineGoToBuffer 5<cr>",  { desc = "Goto buffer 5" })
+    map("n","<leader>b6", "<cmd>BufferLineGoToBuffer 6<cr>",  { desc = "Goto buffer 6" })
+    map("n","<leader>b7", "<cmd>BufferLineGoToBuffer 7<cr>",  { desc = "Goto buffer 7" })
+    map("n","<leader>b8", "<cmd>BufferLineGoToBuffer 8<cr>",  { desc = "Goto buffer 8" })
+    map("n","<leader>b9", "<cmd>BufferLineGoToBuffer 9<cr>",  { desc = "Goto buffer 9" })
+    map("n","<leader>bP", "<cmd>BufferLineTogglePin<cr>",  { desc = "Pin/Unpin buffer" })
 else
     map("n","<S-l>", "<cmd>bnext<cr>",  { desc = "Next buffer" })
     map("n","<S-h>", "<cmd>bprevious<cr>",  { desc = "Previous buffer" })
     map("n","<b-l>", "<cmd>BufferLineCycleNext<cr>",  { desc = "Next buffer tab" })
     map("n","<b-h>", "<cmd>BufferLineCyclePrev<cr>",  { desc = "Previous buffer tab" })
+    map("n","<leader>bl", "<cmd>BufferLineCycleNext<cr>",  { desc = "Next buffer tab" })
+    map("n","<leader>bh", "<cmd>BufferLineCyclePrev<cr>",  { desc = "Previous buffer tab" })
 end
 
 -- Clear search with <esc>
@@ -242,12 +259,7 @@ end
 -- Terminal
 if has("toggleterm.nvim") then
     map("n","<C-\\>", "<cmd>ToggleTerm<cr>",  { desc = "Toggle terminal" })
-    map("n","<leader>gg",
-      function()
-        toggle_term_cmd "lazygit"
-      end,
-      {desc = "ToggleTerm lazygit",
-    })
+    map("n","<leader>gg", "<cmd>LazyGit<cr>", {desc = "ToggleTerm lazygit" })
     map("n","<leader>gG",
         function()
           toggle_term_cmd "glances"
@@ -260,18 +272,8 @@ if has("toggleterm.nvim") then
       end,
       {desc = "ToggleTerm htop",
     })
-    map("n","<leader>tp",
-      function()
-        toggle_term_cmd "python"
-      end,
-      {desc = "ToggleTerm python",
-    })
-    map("n","<leader>tl",
-      function()
-        toggle_term_cmd "lazygit"
-      end,
-      {desc = "ToggleTerm lazygit",
-    })
+    map("n","<leader>tp", "<cmd>PythonREPL", { desc = "ToggleTerm python" })
+    map("n","<leader>tl", "<cmd>LazyGit<cr>", { desc = "ToggleTerm lazygit" })
     map("n","<leader>tc",
       function()
         toggle_term_cmd("pre-commit run --all-files", false)
@@ -327,32 +329,33 @@ if has('todo-comments.nvim') then
 end
 
 if has("nvim-dap") then
-    map("n","ds", "<cmd>DapStepOver<cr>",  { desc = "Step Over" })
-    map("n","di", "<cmd>DapStepInto<cr>",  { desc = "Step Into" })
-    map("n","do", "<cmd>DapStepOut<cr>",  { desc = "Step Out" })
-    map("n","db", "<cmd>DapToggleBreakpoint<cr>",  { desc = "Toggle Breakpoint" })
-    map("n","dt", "<cmd>DapTerminate<cr>",  { desc = "Terminate" })
-    map("n","dr", "<cmd>DapToggleRepl<cr>",  { desc = "Toggle REPL" })
-    map("n","dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>",  { desc = "Toggle Conditional Breakpoint" })
-    map("n","du", "<cmd>lua require('dapui').toggle()<cr>" ,  { desc = "Toggle UI" })
-    map("n","dL", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<cr>",  { desc = "List breakpoints" })
-    map("n","dC", "<cmd>lua require'telescope'.extensions.dap.commands{}<cr>",  { desc = "List commands" })
-    map("n","dv", "<cmd>lua require'telescope'.extensions.dap.variables{}<cr>",  { desc = "List variables" })
-    map("n","df", "<cmd>lua require'telescope'.extensions.dap.frames{}<cr>",  { desc = "List frames" })
+    map("n","<leader>dc", "<cmd>DapContinue<cr>", { desc = "Continue" })
+    map("n","<leader>ds", "<cmd>DapStepOver<cr>",  { desc = "Step Over" })
+    map("n","<leader>di", "<cmd>DapStepInto<cr>",  { desc = "Step Into" })
+    map("n","<leader>do", "<cmd>DapStepOut<cr>",  { desc = "Step Out" })
+    map("n","<leader>db", "<cmd>DapToggleBreakpoint<cr>",  { desc = "Toggle Breakpoint" })
+    map("n","<leader>dt", "<cmd>DapTerminate<cr>",  { desc = "Terminate" })
+    map("n","<leader>dr", "<cmd>DapToggleRepl<cr>",  { desc = "Toggle REPL" })
+    map("n","<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>",  { desc = "Toggle Conditional Breakpoint" })
+    map("n","<leader>du", "<cmd>lua require('dapui').toggle()<cr>" ,  { desc = "Toggle UI" })
+    map("n","<leader>dL", "<cmd>lua require'telescope'.extensions.dap.list_breakpoints{}<cr>",  { desc = "List breakpoints" })
+    map("n","<leader>dC", "<cmd>lua require'telescope'.extensions.dap.commands{}<cr>",  { desc = "List commands" })
+    map("n","<leader>v", "<cmd>lua require'telescope'.extensions.dap.variables{}<cr>",  { desc = "List variables" })
+    map("n","<leader>df", "<cmd>lua require'telescope'.extensions.dap.frames{}<cr>",  { desc = "List frames" })
 end
 
 if has("neotest") then
     -- vim.api.nvim_echo("DAPLoaded", false, {})
-    map("n",'nn', "<cmd>lua require('neotest').run.run()<cr>",  { desc = "Run Nearest Test" })
-    map("n",'nd', "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>",  { desc = "Debug Nearest Test" })
-    map("n",'nr', "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>",  { desc = "Run Current Test File" })
-    map("n",'ns', "<cmd>lua require('neotest').run.run({ suite = true })<cr>",  { desc = "Run Current Test Suite" })
-    map("n",'nl', "<cmd>lua require('neotest').run.run_last()<cr>",  { desc = "Run Last Test" })
-    map("n",'nD', "<cmd>lua require('neotest').run.run_last({ strategy = 'dap' })<cr>",  { desc = "Debug Last Test" })
-    map("n",'na', "<cmd>lua require('neotest').run.attach()<cr>",  { desc = "Attach to Running Process" })
-    map("n",'no', "<cmd>lua require('neotest').output.open({ enter = true })<cr>",  { desc = "Outputs" })
-    map("n",'nO', "<cmd>lua require('neotest').output.open({ enter = true, short = true })<cr>",  { desc = "Short Outputs" })
-    map("n",'nk', "<cmd>lua require('neotest').run.stop()<cr>",  { desc = "Kill Current Test Run" })
+    map("n",'<leader>nn', "<cmd>lua require('neotest').run.run()<cr>",  { desc = "Run Nearest Test" })
+    map("n",'<leader>nd', "<cmd>lua require('neotest').run.run({ strategy = 'dap' })<cr>",  { desc = "Debug Nearest Test" })
+    map("n",'<leader>nr', "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>",  { desc = "Run Current Test File" })
+    map("n",'<leader>ns', "<cmd>lua require('neotest').run.run({ suite = true })<cr>",  { desc = "Run Current Test Suite" })
+    map("n",'<leader>nl', "<cmd>lua require('neotest').run.run_last()<cr>",  { desc = "Run Last Test" })
+    map("n",'<leader>nD', "<cmd>lua require('neotest').run.run_last({ strategy = 'dap' })<cr>",  { desc = "Debug Last Test" })
+    map("n",'<leader>na', "<cmd>lua require('neotest').run.attach()<cr>",  { desc = "Attach to Running Process" })
+    map("n",'<leader>no', "<cmd>lua require('neotest').output.open({ enter = true })<cr>",  { desc = "Outputs" })
+    map("n",'<leader>nO', "<cmd>lua require('neotest').output.open({ enter = true, short = true })<cr>",  { desc = "Short Outputs" })
+    map("n",'<leader>nk', "<cmd>lua require('neotest').run.stop()<cr>",  { desc = "Kill Current Test Run" })
 end
 
 -- function set_mappings(map_table, base)

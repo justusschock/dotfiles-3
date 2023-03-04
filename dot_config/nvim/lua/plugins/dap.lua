@@ -2,7 +2,7 @@ return {
     {
         'mfussenegger/nvim-dap',
         config = function()
-            vim.fn.sign_define('DapBreakpoint', {text='', texthl='error', linehl='', numhl=''})
+            vim.fn.sign_define('DapBreakpoint', {text="", texthl='error', linehl='', numhl=''})
         end,
 
     },
@@ -31,7 +31,8 @@ return {
     {
         'mfussenegger/nvim-dap-python',
         config = function()
-            require('dap-python').setup('python')
+            -- require('dap-python').setup('/opt/homebrew/Caskroom/miniconda/base/envs/debugpy/bin/python')
+            require('dap-python').setup()
             require('dap-python').test_runner = 'pytest'
         end,
     },
